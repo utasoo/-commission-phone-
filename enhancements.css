@@ -1,0 +1,20 @@
+/* Lavender gallery: light comments and soft transitions */
+@keyframes lv-sheet-up{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:translateY(0)}}
+@keyframes lv-comment-in{from{opacity:0;transform:translateY(-12px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes lv-story-in{from{opacity:.4;transform:translateX(17px) scale(.98)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes lv-app-in{from{opacity:0;transform:scale(.92) translateY(15px)}to{opacity:1;transform:scale(1) translateY(0)}}
+#panel{animation:lv-app-in .34s cubic-bezier(.2,.8,.2,1)}
+.story{animation:lv-story-in .3s ease-out}
+.storySheet:not([hidden]){animation:lv-sheet-up .37s cubic-bezier(.2,.8,.2,1);background:#fff!important;color:#51445d!important;backdrop-filter:blur(14px)}
+.storyCommentCard{background:#f6f2f9!important;color:#51445d!important;animation:lv-comment-in .32s ease-out both}
+.storyCommentCard.isReply{background:#eee7f6!important}
+.storyCommentCard button{color:#9877b5!important}
+.sheetHeader button{color:#776088!important}
+#storyForm input,#storyForm textarea{background:#f7f4fa!important;color:#51445d!important;border:1px solid #ded1eb!important}
+#storyForm input::placeholder,#storyForm textarea::placeholder{color:#a996b8!important}
+.storyNotice{color:#9587a1!important}
+.lv-account{padding:10px;border-radius:15px;background:#f2ebf8;margin:10px 0;font-size:12px}
+.lv-account input{width:100%;margin:5px 0;padding:10px;border:1px solid #e2d4ef;border-radius:10px;background:white;color:#755b90}
+.lv-account button,.lv-fav{border:0;border-radius:12px;padding:10px;background:#d7c2e8;color:#644a7d;margin:4px 4px 4px 0}
+.lv-fav{position:absolute;bottom:65px;right:13px;z-index:4;background:#ffffffdc;font-size:13px}
+@media(prefers-reduced-motion:reduce){#panel,.story,.storySheet,.storyCommentCard{animation:none!important}}
